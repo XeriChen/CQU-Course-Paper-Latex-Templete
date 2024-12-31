@@ -50,6 +50,21 @@
 \newcommand\dlmu[2][4cm]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
 \makeatother
 
+%%设置代码块的样式
+\lstset{
+    basicstyle=\ttfamily\normalsize,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    stringstyle=\color{red},
+    frame=single,
+    breaklines=true, % 启用自动换行
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+    showstringspaces=false
+}
+
+
 %更改主题
 % \hypersetup{
 %     colorlinks=true,
@@ -117,16 +132,16 @@
 {   
     \title{ 
      %\vspace{3cm} %使用校徽时移除该vspace
-    \heiti \Huge \textbf{{课程名称大标题}} \par
+    \heiti \Huge \textbf{{操作系统课程作业}} \par
     \vspace{1cm} 
-    \heiti \Large {\underline{小标题}}    
+    \heiti \Large {\underline{time()系统调用的原理与应用}}    
     %\vspace{3cm} %使用校徽时修改该vspace为2cm
      \vspace{2cm}
     }%标题 
 
     \author{
     \vspace{0.5cm}
-    \kaishu\Large 教师\ \dlmu[9cm]{教师名} \\ %教师
+    \kaishu\Large 教师\ \dlmu[9cm]{郭尚伟} \\ %教师
     \vspace{0.5cm}
     \kaishu\Large 姓名\ \dlmu[9cm]{陈骁睿} \qquad \\ %姓名 
     \vspace{0.5cm}
