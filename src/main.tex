@@ -13,14 +13,14 @@
 
 \newpage
 %%------------------摘要-------------%%
-\begin{abstract}
+% \begin{abstract}
 
-    摘要
+%     摘要
 
 
-\end{abstract}
+% \end{abstract}
 
-\vspace{1cm}
+% \vspace{1cm}
 
 %%--------------------------目录页------------------------%%
 % \newpage
@@ -84,14 +84,14 @@
 % \subsubsection{粉尘危害监控模块}
 % 该模块通过App类中的多个Handler类实现，如SensorHandler、WorkerHandler等，处理前端发送的请求，从数据库中查询相关数据，并返回给前端进行展示。前端使用Vue.js框架，通过axios发送请求，接收数据，并使用ECharts进行数据可视化。
 
-% \subsubsection{粉尘危害预警模块}
-% 该模块通过对数据库中粉尘浓度数据的实时监测，当粉尘浓度超过设定阈值时，触发预警机制，通过前端页面弹窗或短信等方式通知相关人员。
+\subsubsection{粉尘危害预警模块}
+该模块通过对数据库中粉尘浓度数据的实时监测，当粉尘浓度超过设定阈值时，触发预警机制，通过前端页面标红警告相关人员。
 
-% \subsubsection{累积接尘量监控模块}
-% 该模块通过计算作业工人在不同时间点的粉尘暴露浓度，累计得到总接尘量，并将数据存储到数据库中。前端通过图表展示工人累积接尘量的变化趋势。
+\subsubsection{累积接尘量监控模块}
+该模块通过计算作业工人在不同时间点的粉尘暴露浓度，累计得到总接尘量，并将数据存储到数据库中。前端通过图表展示工人累积接尘量的变化趋势。
 
-% \subsubsection{累积接尘量预警模块}
-% 该模块通过对工人累积接尘量的预测分析，当预测值超过安全阈值时，提前发出预警，提醒工人注意防护或采取相应措施。
+\subsubsection{累积接尘量预警模块}
+该模块通过对工人累积接尘量的预测分析，计算安全周期，提醒工人注意防护或采取相应措施。
 
 \subsubsection{数据统计分析模块}
 该模块提供多维度的数据查询和统计分析功能，用户可以根据不同的条件，如时间范围、传感器编号等，查询相关的粉尘浓度数据、温度数据、湿度数据等，并生成统计报表。
@@ -100,9 +100,15 @@
 
 \subsubsection{传感器采集数据生成}
 
+假设传感器是二维平面上的点，可以设置传感器的编号、坐标等属性。通过SensorData类随机生成传感器数据，包括日期、时间、粉尘浓度、温度、湿度和风力等信息。通过SensorClient类模拟传感器数据的生成，包括历史数据和实时数据，通过Socket连接将数据发送到服务器。
+
 \subsubsection{工人移动轨迹数据生成}
 
+假设工人的运动轨迹是二维平面上的有序点，可以设置工人的姓名、工作天数等属性。通过PathVertex类生成工人轨迹点，包括日期、时间、X坐标和Y坐标等信息。通过WorkerPath类生成工人的轨迹数据，包括一天的轨迹点列表。WorkerClient类通过Socket连接将数据发送到服务器。
+
 \subsubsection{TcpServer数据接收与存储}
+
+通过继承java.net.ServerSocket类实现TcpServer类，监听客户端连接，接收并处理客户端上传的数据。通过继承java.lang.Thread类实现ServerThread类，处理单个客户端的连接和数据交互。通过Database类实现数据的插入、查询等操作，将传感器数据和工人数据存储到数据库中。
 
 \subsubsection{累计接尘量计算}
 
@@ -117,8 +123,6 @@ $$
 \text{averageDensity} = 0.02 \times \frac{\left( \frac{\text{den}_1}{\text{dis}_1 + 1} + \frac{\text{den}_2}{\text{dis}_2 + 1} + \frac{\text{den}_3}{\text{dis}_3 + 1} + \frac{\text{den}_4}{\text{dis}_4 + 1} \right)}{4}
 $$
 其中den是粉尘浓度，dis是距离
-
-\subsection{累计接尘量预测及预警}
 
 \section{代码实现}
 \subsection{前端}
@@ -320,10 +324,61 @@ Preceed方法：HTTP请求的预处理方法，设置响应头以处理跨域问
 
 \section{功能展示}
 
+传感器数据收集
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/传感器历史数据.png}
+    \caption{传感器数据收集}
+\end{figure}
+
+工人路径收集
+
+
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/工人路径.png}
+    \caption{工人路径收集}
+\end{figure}
+
+传感器实时检测
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/实时监测.png}
+    \caption{传感器实时检测}
+\end{figure}
+
+查看现场视频（模拟）
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/实时视频.png}
+    \caption{传感器实时检测}
+\end{figure}
+
+预测累计接尘量，计算安全周期。
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/预测.png}
+    \caption{统计累计接尘量}
+\end{figure}
+
+多维统计分析
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/多维统计分析.png}
+    \caption{多维统计分析}
+\end{figure}
 
 \section{总结}
 
-这里是总结
+本文设计并实现了一套基于物联网的作业场所粉尘危害监测预警系统，实现了粉尘传感器模拟、作业工人轨迹模拟、数据采集管理、粉尘危害监控、粉尘危害预警、累积接尘量监控、累积接尘量预警、数据统计分析等功能。系统采用B/S架构，前端使用Vue.js框架，后端使用Java语言，数据库采用MySQL。通过前后端的协作，实现了系统的各项功能，并通过功能展示，展示了系统的运行效果。
+
+通过这个项目，学习到了物联网技术的应用，了解了粉尘危害监测预警系统的设计与实现，提高了系统设计和开发的能力。在今后的工作中，将继续深入学习物联网技术，不断提升自己的技术水平，为实现更多的智能化应用做出贡献。
 
 %%----------- 参考文献 -------------------%%
 %在reference.bib文件中填写参考文献，此处自动生成
