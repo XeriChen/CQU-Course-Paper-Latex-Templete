@@ -38,8 +38,15 @@
 %    \title{ \Huge \textbf{{time系统调用的原理与应用}}}
 % \end{center}
 
-\section{基本概念}
-基本概念\cite{shank2023linux}
+
+\section{背景}
+1962年，当时还是剑桥大学博士生的英国物理学家布赖恩·约瑟夫森（Brian David Josephson）提出了约瑟夫森效应的理论预言。他意识到Cooper对可以穿过两个超导体之间的绝缘层，从而在没有电压差的情况下产生电流。虽然这个想法在当时遭到了巴丁（John Bardeen）的反对，但如果我们了解近邻效应，不难意识到，超导态作为一个宏观量子态，它在正常相内亦有一定的穿透深度。当超导体之间作为势垒的正常相尺度足够小时，可以猜测正常相内的超导序参量可以保持在有限值，进而Cooper对有隧穿的可能。约瑟夫森的理论预言很快得到了实验验证。1963年，P.W.安德森（Philip Warren Anderson）和J.M.罗威耳（John Michael Rowell）等人在贝尔实验室通过实验观察到了约瑟夫森效应（罗威耳在1962年开始制作Al/AlOx/Pb（铝/氧化铝/铅）结，并在一个能够达到远低于1K温度的低温恒温器中测量，从而首次观察到了约瑟夫森效应，但在约瑟夫森提出预言之前，这种现象被误以为是超短路或绝缘层破损导致的）。\cite{固体物理学}
+  
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/1.jpg}
+    \caption{约瑟夫森（左）和约瑟夫森结示意图（右）}
+\end{figure}
 
 \section{总结}
 
