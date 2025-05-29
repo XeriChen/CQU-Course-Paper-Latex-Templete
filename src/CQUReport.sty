@@ -21,10 +21,10 @@
 \ProvidesPackage{CQUReport}
 
 %%页边距
-\RequirePackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.50cm]{geometry}
+\RequirePackage[left=2.50cm, right=2.50cm, top=1.8cm, bottom=1.30cm]{geometry}
 
 %%一些必要的宏包
-\RequirePackage[unicode=true,colorlinks,urlcolor=blue,linkcolor=blue,bookmarksnumbered=blue]{hyperref}
+\RequirePackage[unicode=true,colorlinks=true,urlcolor=blue,linkcolor=blue,bookmarksnumbered=true]{hyperref}
 \RequirePackage{latexsym,amssymb,amsmath,amsbsy,amsopn,amstext,amsthm,amsxtra,color,bm,calc,ifpdf}
 \RequirePackage{graphicx}
 \RequirePackage{enumerate}
@@ -41,6 +41,9 @@
 \RequirePackage{tcolorbox}
 
 \RequirePackage{fontawesome}
+
+% 修复 fancyhdr 页眉高度警告
+\setlength{\headheight}{14.49998pt}
 
 %% 更改摘要二字的样式
 \renewcommand{\abstractname}{\textbf{\large {摘\quad 要}}} 
@@ -132,7 +135,7 @@
 {   
     \title{ 
      %\vspace{3cm} %使用校徽时移除该vspace
-    \heiti \Huge \textbf{{XXX课程作业}} \par
+    \heiti \Huge {{XXX课程作业}} \par
     \vspace{1cm} 
     \heiti \Large {\underline{XXX标题}}    
     %\vspace{3cm} %使用校徽时修改该vspace为2cm
