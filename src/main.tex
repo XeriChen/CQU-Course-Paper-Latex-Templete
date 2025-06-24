@@ -18,9 +18,9 @@
 \newpage
 %%------------------摘要-------------%%
 \begin{abstract}
-本文系统地研究了约瑟夫森效应的理论基础、物理原理及其在现代量子技术中的重要应用。首先回顾了约瑟夫森效应的历史背景，从1962年布赖恩·约瑟夫森的理论预言到1963年贝尔实验室的实验验证。基于Ginzburg-Landau理论和薛定谔方程，推导了约瑟夫森结中Cooper对的隧穿机制，建立了完整的理论框架。详细分析了直流约瑟夫森效应（DC Josephson Effect）和交流约瑟夫森效应（AC Josephson Effect）的物理机制，推导了相位-电流关系$I_s=I_c\sin\varphi$和相位-电压关系$\partial\varphi/\partial t=2eU/\hbar$。在应用方面，深入探讨了约瑟夫森结在相位敏感实验中的应用，特别是通过超导量子干涉仪（SQUID）确定高温超导体的配对对称性。此外，详细分析了基于约瑟夫森结的超导量子比特的工作原理，从经典LC电路的正则量子化出发，推导了约瑟夫森结如何通过非线性效应实现不等间距的能级结构，为量子计算提供了可控的二能级系统。研究表明，约瑟夫森效应不仅是超导物理的重要组成部分，更是现代量子科技发展的核心技术基础。
+本文系统地研究了约瑟夫森效应的理论基础。首先回顾了约瑟夫森效应的历史背景，从1962年布赖恩·约瑟夫森的理论预言到1963年贝尔实验室的实验验证。基于Ginzburg-Landau理论和薛定谔方程，推导了约瑟夫森结中Cooper对的隧穿机制，建立了完整的理论框架。详细分析了直流约瑟夫森效应（DC Josephson Effect）和交流约瑟夫森效应（AC Josephson Effect）的物理机制，推导了相位-电流关系$I_s=I_c\sin\varphi$和相位-电压关系$\partial\varphi/\partial t=2eU/\hbar$。
 
-\textbf{关键词：}约瑟夫森效应；超导隧穿；SQUID；超导量子比特
+\textbf{关键词：}约瑟夫森效应；超导隧穿
 \end{abstract}
 
 \vspace{1cm}
@@ -32,10 +32,10 @@
 %%------------------------正文页从这里开始-------------------%
 \newpage
 
-%可选择这里也放一个标题
-% \begin{center}
-%    \title{ \Huge \textbf{{time系统调用的原理与应用}}}
-% \end{center}
+% 可选择这里也放一个标题
+\begin{center}
+   \title{ \Huge \textbf{约瑟夫森效应的理论基础}}
+\end{center}
 
 
 \section{背景}
@@ -156,139 +156,137 @@
 \end{align}
 可见，如果在约瑟夫森结两端施加电压，那么规范不变的相位随时间的变化与两端的电压降$U$成正比。这时候通过约瑟夫森结的的电流为交流电$I_s=I_c\sin\varphi=I_c\sin(t\cdot2eU/\hbar)$，其中$2eU/\hbar=2\pi U/\Phi_0$正是交流电的约瑟夫森频率，这种现象被称为交流约瑟夫森效应（AC Josephson Effect）。
 
-\section{应用}
-\subsection{相位敏感实验}
-s波/p波/d波…超导体的说法来源于电子配对的对称性，这种对称性通常体现在超导序参量的相位中，因此我们可以通过相位敏感的约瑟夫森结直接测量相位信息，通过相位特征确定超导体内部配对的对称性。一个典型的实验设计是两个约瑟夫森结并联构成环状电路（图4），其中通过的电流受两个结的相位差和环路内部磁通的影响形成干涉，因此它是超导量子干涉仪（superconducting quantum interference device，SQUID）的核心部分。虽然SQUID对磁通的变化非常敏感，以至于可以用作非常精密的测量手段，但在这部分我们把目光聚焦于它在超导实验中的应用。以下部分参考了《d波超导体》的6.3节\cite{向涛2007d}，主要内容为通过SQUID结构确定高温超导体的超导对称性。
+% \section{应用}
+% \subsection{相位敏感实验}
+% s波/p波/d波…超导体的说法来源于电子配对的对称性，这种对称性通常体现在超导序参量的相位中，因此我们可以通过相位敏感的约瑟夫森结直接测量相位信息，通过相位特征确定超导体内部配对的对称性。一个典型的实验设计是两个约瑟夫森结并联构成环状电路（图4），其中通过的电流受两个结的相位差和环路内部磁通的影响形成干涉，因此它是超导量子干涉仪（superconducting quantum interference device，SQUID）的核心部分。虽然SQUID对磁通的变化非常敏感，以至于可以用作非常精密的测量手段，但在这部分我们把目光聚焦于它在超导实验中的应用。以下部分参考了《d波超导体》的6.3节\cite{向涛2007d}，主要内容为通过SQUID结构确定高温超导体的超导对称性。
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.4\textwidth]{figures/4.jpg}
-    \caption{SQUID示意图}
-\end{figure}
+% \begin{figure}[ht]
+%     \centering
+%     \includegraphics[width=0.4\textwidth]{figures/4.jpg}
+%     \caption{SQUID示意图}
+% \end{figure}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.6\textwidth]{figures/5.jpg}
-    \caption{由s波超导体Pb和高温超导体YBCO组成的两种SQUID（左：角连接；右：边连接）}
-\end{figure}
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.6\textwidth]{figures/5.jpg}
+%     \caption{由s波超导体Pb和高温超导体YBCO组成的两种SQUID（左：角连接；右：边连接）}
+% \end{figure}
 
-如图5所示，把s波超导体和高温超导体YBCO通过弱连接方式连接起来，形成SQUID结构，其两个结分别与YBCO的某两个面连接。把这两个结记为a和b，相应的相位差为$\varphi_a$和$\varphi_b$，那么流过SQUID结构的总电流为a、b上的电流之和：
-\begin{align}
-    I_{s}&=I_{s,a}+I_{s,b} \notag\\
-    I_{s,a}&=I_{c,a}\sin(\varphi_a+\delta_a) \notag\\
-    I_{s,b}&=I_{c,b}\sin(\varphi_b+\delta_b) 
-\end{align}
-其中$\delta_a,\delta_b$可根据SQUID两个结的几何位置取$0$或$\pi$。如果忽略超导体序参量的模$|\Psi|=|\sqrt{n^*}|$的涨落，那么\autoref{eq1}可改写成
-\begin{equation}
-    \boldsymbol{J_s}=-\frac{n^{*2}e\hbar}{m_e}\nabla\theta-\frac{2n^{*2}e^2}{m_e}\boldsymbol{A}
-\end{equation}
-也可以表示成
-\begin{equation}
-    \frac{m_e}{2e^2n^{*2}}\boldsymbol{J_s}+\boldsymbol{A}=-\frac{\Phi_0}{2\pi}\nabla\theta
-\end{equation}
-两边分别沿环状电路积分得到
-\begin{align}
-    \oint_{SQUID}{\left( \frac{m_e}{2e^2n^{*2}}\boldsymbol{J_s}+\boldsymbol{A}\right)\cdot d\boldsymbol{l}}&=\Phi_s+\Phi_A=(I_{s,a}L_a-I_{s,b}L_b)+\Phi_A \label{eq24}\\
-    -\frac{\Phi_0}{2\pi}\oint_{SQUID}{\nabla\theta \cdot d\boldsymbol{l}}&= \frac{\Phi_0}{2\pi}(\varphi_a-\varphi_b+2\pi n), n\in\mathbb{Z}
-\end{align}
-\autoref{eq24}第二个等号利用了电感和磁通的关系$\Phi=IL$。对于一个完全对称的SQUID系统，a、b结上的自感磁通满足$I_{s,a}L_a=I_{s,b}L_b$，再结合上面的推导，我们可以得到两个结的相位差满足的方程为
-\begin{equation}
-    \varphi_a-\varphi_b=2\pi\frac{\Phi_A}{\Phi_0}+2\pi n, n\in\mathbb{Z}
-\end{equation}
-若进一步假设两个结的临界电流相等$I_{c,a}=I_{c,b}=I_c$，那么总电流为：
-\begin{align}
-    I_s&=I_c(\sin(\varphi_a+\delta_a)+\sin(\varphi_b+\delta_b))\notag\\
-    &=2I_c\sin\left(\frac{\varphi_a+\delta_a+\varphi_b+\delta_b}{2}\right)\cos\left(\frac{\varphi_a+\delta_a-\varphi_b-\delta_b}{2}\right)
-\end{align}
-显然这就是两道正弦波干涉的结果。当$\varphi_a+\delta_a+\varphi_b+\delta_b=\pi$时，$I_s$有最大值
-\begin{equation}
-    I_{max}=2I_c\cos\left(\frac{\pi\Phi_A}{\Phi_0}+\frac{\delta_a-\delta_b}{2}\right)
-\end{equation}
+% 如图5所示，把s波超导体和高温超导体YBCO通过弱连接方式连接起来，形成SQUID结构，其两个结分别与YBCO的某两个面连接。把这两个结记为a和b，相应的相位差为$\varphi_a$和$\varphi_b$，那么流过SQUID结构的总电流为a、b上的电流之和：
+% \begin{align}
+%     I_{s}&=I_{s,a}+I_{s,b} \notag\\
+%     I_{s,a}&=I_{c,a}\sin(\varphi_a+\delta_a) \notag\\
+%     I_{s,b}&=I_{c,b}\sin(\varphi_b+\delta_b) 
+% \end{align}
+% 其中$\delta_a,\delta_b$可根据SQUID两个结的几何位置取$0$或$\pi$。如果忽略超导体序参量的模$|\Psi|=|\sqrt{n^*}|$的涨落，那么\autoref{eq1}可改写成
+% \begin{equation}
+%     \boldsymbol{J_s}=-\frac{n^{*2}e\hbar}{m_e}\nabla\theta-\frac{2n^{*2}e^2}{m_e}\boldsymbol{A}
+% \end{equation}
+% 也可以表示成
+% \begin{equation}
+%     \frac{m_e}{2e^2n^{*2}}\boldsymbol{J_s}+\boldsymbol{A}=-\frac{\Phi_0}{2\pi}\nabla\theta
+% \end{equation}
+% 两边分别沿环状电路积分得到
+% \begin{align}
+%     \oint_{SQUID}{\left( \frac{m_e}{2e^2n^{*2}}\boldsymbol{J_s}+\boldsymbol{A}\right)\cdot d\boldsymbol{l}}&=\Phi_s+\Phi_A=(I_{s,a}L_a-I_{s,b}L_b)+\Phi_A \label{eq24}\\
+%     -\frac{\Phi_0}{2\pi}\oint_{SQUID}{\nabla\theta \cdot d\boldsymbol{l}}&= \frac{\Phi_0}{2\pi}(\varphi_a-\varphi_b+2\pi n), n\in\mathbb{Z}
+% \end{align}
+% \autoref{eq24}第二个等号利用了电感和磁通的关系$\Phi=IL$。对于一个完全对称的SQUID系统，a、b结上的自感磁通满足$I_{s,a}L_a=I_{s,b}L_b$，再结合上面的推导，我们可以得到两个结的相位差满足的方程为
+% \begin{equation}
+%     \varphi_a-\varphi_b=2\pi\frac{\Phi_A}{\Phi_0}+2\pi n, n\in\mathbb{Z}
+% \end{equation}
+% 若进一步假设两个结的临界电流相等$I_{c,a}=I_{c,b}=I_c$，那么总电流为：
+% \begin{align}
+%     I_s&=I_c(\sin(\varphi_a+\delta_a)+\sin(\varphi_b+\delta_b))\notag\\
+%     &=2I_c\sin\left(\frac{\varphi_a+\delta_a+\varphi_b+\delta_b}{2}\right)\cos\left(\frac{\varphi_a+\delta_a-\varphi_b-\delta_b}{2}\right)
+% \end{align}
+% 显然这就是两道正弦波干涉的结果。当$\varphi_a+\delta_a+\varphi_b+\delta_b=\pi$时，$I_s$有最大值
+% \begin{equation}
+%     I_{max}=2I_c\cos\left(\frac{\pi\Phi_A}{\Phi_0}+\frac{\delta_a-\delta_b}{2}\right)
+% \end{equation}
 
-如果SQUID系统如图5的左图所示，结的一边是s波超导体，另一边是$d_{x^2-y^2}$超导体，并且是沿着$d_{x^2-y^2}$超导体的两个主轴方向形成结，那么$|\delta_a-\delta_b|=\pi$。此时，$I_{max}$在$\Phi_A=\Phi_0(2n+1)/2$时取极大值，在$\Phi_A=n\Phi_0$时取极小值（$n\in\mathbb{Z}$）。如果系统如图5的右图所示，s波超导体与$d_{x^2-y^2}$超导体在同一个面连接形成两个结，那么$|\delta_a-\delta_b|=0$，$I_{max}$在$\Phi_A=\Phi_0(2n+1)/2$时取极小值，在$\Phi_A=n\Phi_0$时取极大值（$n\in\mathbb{Z}$）。从结论上看，当s波超导体与$d_{x^2-y^2}$超导体形成SQUID时，量子干涉电流的极值与结的几何位形密切相关，因此我们可以利用这种特性来确定超导配对的对称性。
-
-
-\subsection{超导量子比特}
-为了完成与经典计算匹配的信息编码，量子计算通常会选取某个量子态$\ket{0}(\ket{1})$作为二进制中的0（1），两个态处于不同的能级，它们的叠加态共同构成一个量子比特（qubit）$\ket{Q}=\alpha\ket{0}+\beta\ket{1}$。接下来我们可以看到，约瑟夫森结独有的一些性质可以帮助我们挑选出这样的量子态（通常也称人工原子）。
-
-\begin{figure}[ht]
-    \centering
-     \includegraphics[width=0.6\textwidth]{figures/6.jpg}
-     \caption{LC电路（左）和约瑟夫森结实现的超导量子比特（右）}
-\end{figure}
-
-\subsubsection{经典LC电路}
-首先我们可以由一个简单的LC电路来引入电路的正则量子化。考虑一个由超导线路（因此没有耗散）连接的经典LC振荡电路，它是由一个电容$L$和一个电感$C$串联而成的闭合回路，如图4所示。电路的磁通$\Phi$和电荷量$Q$满足演化方程：
-\begin{align}
-    Q&=C\frac{d\Phi}{dt}\notag\\
-    \Phi&=-L\frac{dQ}{dt}
-\end{align}
-并且系统的总能量为
-\begin{equation}
-    H=\frac{\Phi^2}{2L}+\frac{Q^2}{2C}
-\end{equation}
-由以上两个条件，我们还可以进一步写出与分析力学中广义动量与广义坐标类似的正则关系：
-\begin{align}
-    \dot{\Phi}&=\frac{\partial H}{\partial Q}\notag\\
-    \dot{Q}&=-\frac{\partial H}{\partial \Phi}
-\end{align}
-不难推测，$\Phi$和$Q$应该具有与坐标和动量类似的对易关系$[\Phi,Q]=i\hbar$（至于为什么对易子依然是$i\hbar$，虽然可以从量纲验证，但本质上是因为广义坐标和广义动量在满足正则关系的前提下，其对易关系并不依赖于量纲的选取，因此$i\hbar$是普适的），这样我们就完成了正则量子化。接下来自然地引入升降算符
-\begin{align}
-    a&=\sqrt{\frac{1}{2\hbar Z}(\Phi+iZQ)} \notag\\
-    a^\dagger&=\sqrt{\frac{1}{2\hbar Z}(\Phi-iZQ)} 
-\end{align}
-其中$Z=\sqrt{L/C}$是电路的特征阻抗。这样哈密顿量就可以写成熟悉的谐振子形式
-\begin{equation}
-    H=\hbar\omega(a^\dagger a +\frac{1}{2}),\omega=\frac{1}{\sqrt{LC}}
-\end{equation}
-可见这是一个能级等间距的系统，由于无法区分所有能级的能级差，我们不能确保量子比特处于特定两个态上。要制作一个可调控的量子比特，我们需要把这两个态从其他量子态中区分出来，这就要求我们把这个系统的能级变成不等间距的。从上一节的推导我们知道，约瑟夫森结的电流-电压关系$I_s=I_c\sin\varphi=I_c\sin(t\cdot2eU/\hbar)$是非线性的，因此我们可以期待它可以打破LC振荡电路能级的等间距性。
+% 如果SQUID系统如图5的左图所示，结的一边是s波超导体，另一边是$d_{x^2-y^2}$超导体，并且是沿着$d_{x^2-y^2}$超导体的两个主轴方向形成结，那么$|\delta_a-\delta_b|=\pi$。此时，$I_{max}$在$\Phi_A=\Phi_0(2n+1)/2$时取极大值，在$\Phi_A=n\Phi_0$时取极小值（$n\in\mathbb{Z}$）。如果系统如图5的右图所示，s波超导体与$d_{x^2-y^2}$超导体在同一个面连接形成两个结，那么$|\delta_a-\delta_b|=0$，$I_{max}$在$\Phi_A=\Phi_0(2n+1)/2$时取极小值，在$\Phi_A=n\Phi_0$时取极大值（$n\in\mathbb{Z}$）。从结论上看，当s波超导体与$d_{x^2-y^2}$超导体形成SQUID时，量子干涉电流的极值与结的几何位形密切相关，因此我们可以利用这种特性来确定超导配对的对称性。
 
 
-\subsubsection{约瑟夫森结实现量子比特}
-把LC振荡电路中的电感替换成约瑟夫森结，就构成了我们所需要的量子比特。电容上的能量依然是$Q^2/2C$，而约瑟夫森结上的能量可以由约瑟夫森关系计算（忽略积分常数）：
-\begin{align}
-    U&=\frac{\Phi_0}{2\pi}\frac{\partial\varphi}{\partial t} \notag\\
-    I&=I_c\sin\varphi \notag\\
-    E&=\int{U(t)I(t)dt}=-I_c\frac{\Phi_0}{2\pi}\cos\varphi
-\end{align}
-于是系统的哈密顿量为
-\begin{equation}
-    H=\frac{Q^2}{2C}-I_c\frac{\Phi_0}{2\pi}\cos\varphi=4E_Cn^2-E_J\cos\varphi
-\end{equation}
-这里定义了Josephson energy $E_J=I_c\Phi_0/2\pi$，并且代入了Cooper对的数量$n=Q/2e$，同时定义了charging energy $E_C=e^2/2C$。如果我们把$\cos\varphi$进行泰勒展开到二阶，忽略常数项，那么哈密顿量又会回到原来的谐振子形式
-\begin{equation}
-    H=4E_cn^2+E_J\frac{\varphi^2}2{}
-\end{equation}
-因此，让能级不等间距的关键在于高阶项，但在此之前，我们可以先处理谐振子形式的哈密顿量，首先有对易关系$[\varphi,n]=i$，进而定义升降算符和$\varphi$算符：
-\begin{align}
-    a^\dagger&=\sqrt{\frac{E_J}{2\hbar\omega}}\left(\varphi+i2\sqrt{\frac{2E_C}{E_J}}n\right) \notag\\
-    a&=\sqrt{\frac{E_J}{2\hbar\omega}}\left(\varphi-i2\sqrt{\frac{2E_C}{E_J}}n\right) \notag\\
-    \varphi&=\left(\frac{2E_C}{E_J}\right)^{1/4}(a^{\dagger}+a)
-\end{align}
+% \subsection{超导量子比特}
+% 为了完成与经典计算匹配的信息编码，量子计算通常会选取某个量子态$\ket{0}(\ket{1})$作为二进制中的0（1），两个态处于不同的能级，它们的叠加态共同构成一个量子比特（qubit）$\ket{Q}=\alpha\ket{0}+\beta\ket{1}$。接下来我们可以看到，约瑟夫森结独有的一些性质可以帮助我们挑选出这样的量子态（通常也称人工原子）。
 
-接下来考虑下一阶展开$-E_J\varphi^4/24$，假设它对能级的修正为$\Delta E_n$，那么总的能级可表示成$E_n=n\hbar\omega+\Delta E_n(\hbar\omega=2\sqrt{2E_JE_C})$，通过计算我们可以得到高阶修正
-\begin{align}
-    \Delta E_n&=\bra{n}-E_J\varphi^4/24\ket{n} \notag\\
-   & =-\frac{E_C}{12}\bra{n}(a^\dagger+a)^4\ket{n} \notag\\
-    &=-\frac{E_C}{12}\bra{n}(a^{\dagger}a^{\dagger}aa+a^{\dagger}aa^{\dagger}a+a^{\dagger}aaa^{\dagger}+aa^{\dagger}a^{\dagger}a+aa^{\dagger}aa^{\dagger}+aaa^{\dagger}a^{\dagger})\ket{n} \notag\\
-    &=-\frac{E_C}{4}(2n^2+2n+1)
-\end{align}
-\begin{equation}
-    E_n=2n\sqrt{2E_JE_C}-\frac{E_C}{4}(2n^2+2n+1)
-\end{equation}
-所以相邻的两个能级差为
-\begin{equation}
-    E_n-E_{n-1}=2\sqrt{2E_JE_C}-nE_C
-\end{equation}
-注意到能级差的差正是charging energy $-E_C$，这个量越大（意味着电容$C$越小），那么不同的的能级间隔就越容易区分，量子比特也越容易调控。
+% \begin{figure}[ht]
+%     \centering
+%      \includegraphics[width=0.6\textwidth]{figures/6.jpg}
+%      \caption{LC电路（左）和约瑟夫森结实现的超导量子比特（右）}
+% \end{figure}
+
+% \subsubsection{经典LC电路}
+% 首先我们可以由一个简单的LC电路来引入电路的正则量子化。考虑一个由超导线路（因此没有耗散）连接的经典LC振荡电路，它是由一个电容$L$和一个电感$C$串联而成的闭合回路，如图4所示。电路的磁通$\Phi$和电荷量$Q$满足演化方程：
+% \begin{align}
+%     Q&=C\frac{d\Phi}{dt}\notag\\
+%     \Phi&=-L\frac{dQ}{dt}
+% \end{align}
+% 并且系统的总能量为
+% \begin{equation}
+%     H=\frac{\Phi^2}{2L}+\frac{Q^2}{2C}
+% \end{equation}
+% 由以上两个条件，我们还可以进一步写出与分析力学中广义动量与广义坐标类似的正则关系：
+% \begin{align}
+%     \dot{\Phi}&=\frac{\partial H}{\partial Q}\notag\\
+%     \dot{Q}&=-\frac{\partial H}{\partial \Phi}
+% \end{align}
+% 不难推测，$\Phi$和$Q$应该具有与坐标和动量类似的对易关系$[\Phi,Q]=i\hbar$（至于为什么对易子依然是$i\hbar$，虽然可以从量纲验证，但本质上是因为广义坐标和广义动量在满足正则关系的前提下，其对易关系并不依赖于量纲的选取，因此$i\hbar$是普适的），这样我们就完成了正则量子化。接下来自然地引入升降算符
+% \begin{align}
+%     a&=\sqrt{\frac{1}{2\hbar Z}(\Phi+iZQ)} \notag\\
+%     a^\dagger&=\sqrt{\frac{1}{2\hbar Z}(\Phi-iZQ)} 
+% \end{align}
+% 其中$Z=\sqrt{L/C}$是电路的特征阻抗。这样哈密顿量就可以写成熟悉的谐振子形式
+% \begin{equation}
+%     H=\hbar\omega(a^\dagger a +\frac{1}{2}),\omega=\frac{1}{\sqrt{LC}}
+% \end{equation}
+% 可见这是一个能级等间距的系统，由于无法区分所有能级的能级差，我们不能确保量子比特处于特定两个态上。要制作一个可调控的量子比特，我们需要把这两个态从其他量子态中区分出来，这就要求我们把这个系统的能级变成不等间距的。从上一节的推导我们知道，约瑟夫森结的电流-电压关系$I_s=I_c\sin\varphi=I_c\sin(t\cdot2eU/\hbar)$是非线性的，因此我们可以期待它可以打破LC振荡电路能级的等间距性。
+
+
+% \subsubsection{约瑟夫森结实现量子比特}
+% 把LC振荡电路中的电感替换成约瑟夫森结，就构成了我们所需要的量子比特。电容上的能量依然是$Q^2/2C$，而约瑟夫森结上的能量可以由约瑟夫森关系计算（忽略积分常数）：
+% \begin{align}
+%     U&=\frac{\Phi_0}{2\pi}\frac{\partial\varphi}{\partial t} \notag\\
+%     I&=I_c\sin\varphi \notag\\
+%     E&=\int{U(t)I(t)dt}=-I_c\frac{\Phi_0}{2\pi}\cos\varphi
+% \end{align}
+% 于是系统的哈密顿量为
+% \begin{equation}
+%     H=\frac{Q^2}{2C}-I_c\frac{\Phi_0}{2\pi}\cos\varphi=4E_Cn^2-E_J\cos\varphi
+% \end{equation}
+% 这里定义了Josephson energy $E_J=I_c\Phi_0/2\pi$，并且代入了Cooper对的数量$n=Q/2e$，同时定义了charging energy $E_C=e^2/2C$。如果我们把$\cos\varphi$进行泰勒展开到二阶，忽略常数项，那么哈密顿量又会回到原来的谐振子形式
+% \begin{equation}
+%     H=4E_cn^2+E_J\frac{\varphi^2}2{}
+% \end{equation}
+% 因此，让能级不等间距的关键在于高阶项，但在此之前，我们可以先处理谐振子形式的哈密顿量，首先有对易关系$[\varphi,n]=i$，进而定义升降算符和$\varphi$算符：
+% \begin{align}
+%     a^\dagger&=\sqrt{\frac{E_J}{2\hbar\omega}}\left(\varphi+i2\sqrt{\frac{2E_C}{E_J}}n\right) \notag\\
+%     a&=\sqrt{\frac{E_J}{2\hbar\omega}}\left(\varphi-i2\sqrt{\frac{2E_C}{E_J}}n\right) \notag\\
+%     \varphi&=\left(\frac{2E_C}{E_J}\right)^{1/4}(a^{\dagger}+a)
+% \end{align}
+
+% 接下来考虑下一阶展开$-E_J\varphi^4/24$，假设它对能级的修正为$\Delta E_n$，那么总的能级可表示成$E_n=n\hbar\omega+\Delta E_n(\hbar\omega=2\sqrt{2E_JE_C})$，通过计算我们可以得到高阶修正
+% \begin{align}
+%     \Delta E_n&=\bra{n}-E_J\varphi^4/24\ket{n} \notag\\
+%    & =-\frac{E_C}{12}\bra{n}(a^\dagger+a)^4\ket{n} \notag\\
+%     &=-\frac{E_C}{12}\bra{n}(a^{\dagger}a^{\dagger}aa+a^{\dagger}aa^{\dagger}a+a^{\dagger}aaa^{\dagger}+aa^{\dagger}a^{\dagger}a+aa^{\dagger}aa^{\dagger}+aaa^{\dagger}a^{\dagger})\ket{n} \notag\\
+%     &=-\frac{E_C}{4}(2n^2+2n+1)
+% \end{align}
+% \begin{equation}
+%     E_n=2n\sqrt{2E_JE_C}-\frac{E_C}{4}(2n^2+2n+1)
+% \end{equation}
+% 所以相邻的两个能级差为
+% \begin{equation}
+%     E_n-E_{n-1}=2\sqrt{2E_JE_C}-nE_C
+% \end{equation}
+% 注意到能级差的差正是charging energy $-E_C$，这个量越大（意味着电容$C$越小），那么不同的的能级间隔就越容易区分，量子比特也越容易调控。
 
 \section{总结}
 
-本文全面阐述了约瑟夫森效应的理论基础和实际应用，主要取得以下成果：
+\subsection{理论推导}
 
-\subsection{理论贡献}
-
-首先，从量子力学基本原理出发，基于Ginzburg-Landau理论建立了描述约瑟夫森结中Cooper对隧穿的理论框架。通过求解薛定谔方程，严格推导了约瑟夫森结的电流密度公式：
+首先，本文从量子力学基本原理出发，基于Ginzburg-Landau理论建立了描述约瑟夫森结中Cooper对隧穿的理论框架。通过求解薛定谔方程，严格推导了约瑟夫森结的电流密度公式：
 \begin{equation}
     \boldsymbol{J_s}=\boldsymbol{J_c}\sin(\theta_1-\theta_2)
 \end{equation}
@@ -301,7 +299,7 @@ s波/p波/d波…超导体的说法来源于电子配对的对称性，这种对
 
 \subsection{应用价值}
 
-在实验应用方面，本文展示了约瑟夫森效应在两个重要领域的应用：
+在实验应用方面，约瑟夫森效应在两个重要领域的应用：
 
 \textbf{超导配对对称性测量：}通过SQUID结构的量子干涉效应，可以精确测定超导体的配对对称性。特别是对于$d_{x^2-y^2}$波超导体，不同的结连接方式会产生显著不同的干涉图样，为高温超导机理研究提供了重要实验手段。
 
@@ -315,9 +313,7 @@ s波/p波/d波…超导体的说法来源于电子配对的对称性，这种对
 
 约瑟夫森效应作为宏观量子现象的典型代表，不仅深化了我们对超导物理的理解，更成为了量子信息技术的重要基础。当前基于约瑟夫森结的超导量子计算已经展现出巨大潜力，IBM、Google等公司的量子处理器都采用了这一技术路线。
 
-未来研究方向包括：（1）进一步优化约瑟夫森结的相干时间和门操作保真度；（2）探索新型约瑟夫森结构，如拓扑约瑟夫森结；（3）发展大规模集成的超导量子芯片技术。随着材料科学和微纳加工技术的不断进步，基于约瑟夫森效应的量子技术必将在未来量子计算和量子通信领域发挥更加重要的作用。
-
-约瑟夫森效应从一个纯理论预言发展为现代量子技术的核心，充分体现了基础物理研究的重要价值和深远影响。这一发展历程也为我们提供了重要启示：深入理解物理本质是技术创新的根本动力。
+随着材料科学和微纳加工技术的不断进步，基于约瑟夫森效应的量子技术必将在未来量子计算和量子通信领域发挥更加重要的作用。
 
 %%----------- 参考文献 -------------------%%
 %在reference.bib文件中填写参考文献，此处自动生成
