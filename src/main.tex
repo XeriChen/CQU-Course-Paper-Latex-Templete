@@ -2,9 +2,10 @@
 \documentclass[12pt,a4paper,UTF8]{ctexart}
 \usepackage{CQUReport}
 
-% 设置二倍行距
+% 设置行距
 \usepackage{setspace}
-\doublespacing
+% \doublespacing % 设置双倍行距
+\onehalfspacing % 设置1.5倍行距
 
 %%-------------------------------正文开始---------------------------%%
 \begin{document}
@@ -19,7 +20,7 @@
 %%------------------摘要-------------%%
 \begin{abstract}
 
-    摘要
+    这篇文章是强基三年的学习总结，从课程学习、科研、竞赛、课外活动四个方面进行总结。然后对未来的学习和发展方向进行展望。
 
 
 \end{abstract}
@@ -33,17 +34,130 @@
 %%------------------------正文页从这里开始-------------------%
 \newpage
 
-%可选择这里也放一个标题
-% \begin{center}
-%    \title{ \Huge \textbf{{time系统调用的原理与应用}}}
-% \end{center}
+可选择这里也放一个标题
+\begin{center}
+   \title{ \Huge \textbf{{强基三年学习总结}}}
+\end{center}
 
-\section{基本概念}
-基本概念\cite{shank2023linux}
+\section{课程学习}
 
-\section{总结}
+\subsection{整体成绩分析}
 
-这里是总结
+绩点和排名是检验学习成果的重要指标，截至本文撰写时，教务网上相关数据如下。
+
+\begin{table}[ht]
+    \centering
+    \caption{学习成绩总体情况}
+    \label{tab:overall_performance}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{评价指标} & \textbf{成绩} \\
+        \hline
+        总绩点 & 3.516 \\
+        \hline
+        年级参考排名 & 17 \\
+        \hline
+        专业参考排名 & 5 \\
+        \hline
+        班级参考排名 & 3 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width =.6\textwidth]{figures/GPAs.png}
+\caption{各学期绩点变化}
+\label{fig:GPAs}
+\end{figure}
+
+首先从\autoref{tab:overall_performance}整体来看，学习成绩总体良好，在本专业强基物理的排名较为突出。
+
+从\autoref{fig:GPAs}可以看出，每个学期的成绩都比较稳定，能保持在3.4以上，学习成绩呈现出先稍有下降、后显著提升的趋势，特别是在第五、六学期取得了明显进步。在我看来和大三的课程数量减少有关。
+
+% \subsection{核心课程成绩分析}
+
+\subsection{辅修计算机课程分析}
+
+除了主修的物理外，因个人爱好，本人从大二开始辅修了计算机科学与技术。现已完成所有课程的学习，取得了足够的学分，见\autoref{fig:cs}。只需要明年完成毕业设计即可获得计算机学士学位。目标是拿到双学位的证书。
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width =.6\textwidth]{figures/cs.jpeg}
+    \caption{计算机课程学分审查}
+    \label{fig:cs}
+\end{figure}
+
+\section{科研}
+
+\subsection{科研项目}
+
+在大一和大二期间，我分别参加了SRTP和国市创的创新创业项目，均取得了良好结项。
+
+大学生科研训练计划（SRTP）：利用有限元分析的方法研究并设计半导体激光器的散热装置。
+国家级大学生创新训练项目：高效光催化二氧化碳还原制甲烷的性能研究。
+
+\subsection{科研学习}
+
+我从大二开始就进入了张学锋老师课题组学习，虽然对理论知识掌握不够，也尚未取得明显的成果，但在程序算法实践中有着不小的提升。借课题组机会，这三年里，我参加了很多科研学习活动，包括暑期学校、学术讲座等。这些活动让我对科研有了更深入的了解，也激发了我对未来科研工作的兴趣。
+
+值得一提的是，在\autoref{fig:meeting}量子蒙特卡洛青年论坛上，我做了一个简短的5分钟报告。这是我第一次当着这么多老师和同学的面做报告。项目内容是蒙特卡洛算法的并行优化，这是一个非常新颖也非常困难的课题。
+
+\begin{figure}[ht]
+        \centering
+    \includegraphics[width =.6\textwidth]{figures/qmcmeeting.jpg}
+    \caption{2024量子蒙特卡洛青年论坛}
+    \label{fig:meeting}
+\end{figure}
+
+\section{竞赛}
+
+在三年的学习过程中，我积极参与各类学科竞赛，不仅拓宽了学术视野，也锻炼了团队协作能力。教务网上记录的竞赛如\autoref{tab:competitions}所示：
+
+\begin{table}[ht]
+    \centering
+    \caption{参与竞赛情况统计}
+    \label{tab:competitions}
+    \begin{tabular}{|p{6cm}|c|c|p{3cm}|p{2.5cm}|}
+        \hline
+        \textbf{竞赛名称} & \textbf{级别} & \textbf{时间} & \textbf{竞赛类别} & \textbf{认证等级} \\
+        \hline
+        2025年美国大学生数学建模竞赛 & 国际级 & 2025 & 美国大学生数模竞赛 & 国际级成功参赛 \\
+        \hline
+        第六届重庆市大学生物理创新竞赛 & 省部级 & 2023 & 重庆市大学生物理创新竞赛 & 省部级三等奖 \\
+        \hline
+        第九届全国大学生物理实验竞赛（创新）校赛选拔 & 校级 & 2023 & 全国大学生物理实验竞赛 & 校级三等奖 \\
+        \hline
+        2023重庆大学计算机设计大赛 & 校级 & 2023 & 中国大学生计算机设计大赛 & 校级成功参赛 \\
+        \hline
+        第九届中国高校计算机大赛-团体程序设计天梯赛校赛 & 校级 & 2024 & 中国高校计算机大赛 & 校级三等奖 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+
+从\autoref{tab:competitions}可以看出，我的竞赛参与涵盖了数学建模、物理创新、计算机设计等多个领域，体现了跨学科的学习兴趣和能力。特别值得一提的是在省部级竞赛中获得三等奖，以及参与国际级数学建模竞赛的经历。
+
+除此之外我还参加了robmaster机甲大师和蓝桥杯c++程序设计竞赛。并在蓝桥杯中获得了重庆市的一等奖\autoref{fig:lanqiao}。
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width =.4\textwidth]{figures/陈骁睿_蓝桥杯省一.jpg}
+    \caption{蓝桥杯省一证书}
+    \label{fig:lanqiao}
+\end{figure}
+
+\section{课外活动}
+
+从大一开始，我就积极参加各类课外活动，运动会、科技文化节、志愿者活动等，锻炼了自己的综合素质。总志愿时长187小时，曾被选为物理实验竞赛的优秀志愿者。在大二时，我担任了微软学生俱乐部的负责人，组织了多次技术分享和黑客松编程比赛\cite{cquyouth2024}。我还加入了重庆大学朋辈导师团队，从大二到大三，参加了多次朋辈一对一辅导活动。正所谓教学相长，这个过程让我受益匪浅。
+
+\section{总结与展望}
+
+在重大三年的学习过程中，我不仅在学术上取得了优异的成绩，也在科研、竞赛和课外活动中积累了丰富的经验。我加入了优异生团队，并多次评选为优秀学生，获得了两次乙等奖学金和两次丙等奖学金。
+
+对于升学，我打算直博，继续攻读物理专业，跟着张学锋老师做强关联凝聚态物理领域的研究。希望能在未来的学术道路上取得更大的成就。展望未来，我将继续保持对知识的渴望，积极探索未知领域，为实现自己的理想而不懈努力。
+
 
 %%----------- 参考文献 -------------------%%
 %在reference.bib文件中填写参考文献，此处自动生成
